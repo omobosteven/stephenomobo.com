@@ -12,6 +12,21 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-theme-material-ui",
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: "Montserrat",
+                variants: ["300", "400", "500"],
+              },
+            ],
+          },
+        },
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
