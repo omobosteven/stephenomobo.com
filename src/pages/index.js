@@ -7,17 +7,27 @@ const IndexPage = () => {
 
   return (
     <main className={classes.main}>
-      <p>Portfolio</p>
+      <p>Coming Soon...</p>
     </main>
   )
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   main: {
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
     '& p': {
-      fontFamily: "'Montserrat', sans-serif"
+      fontFamily: "'Montserrat', sans-serif",
+      color: theme.palette.common.white,
+      margin: 0,
+      textAlign: 'center',
+      width: '100%',
+      fontSize: 50
     }
   }
-});
+}));
 
 export default IndexPage
