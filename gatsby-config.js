@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "stephenomobo",
+    siteUrl: "https://stephenomobo.com",
+    title: "Stephen Omobo",
+  },
+  flags: {
+    DEV_SSR: false,
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
@@ -20,6 +23,10 @@ module.exports = {
               {
                 family: "Montserrat",
                 variants: ["300", "400", "500"],
+              },
+              {
+                family: "Inconsolata",
+                variants: ["300", "400", "500", "600"],
               },
             ],
           },
@@ -41,6 +48,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
     },
   ],
 };
