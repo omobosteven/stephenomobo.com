@@ -1,19 +1,19 @@
 import { createTheme } from "@material-ui/core";
-import typography from './theme/typography';
+import typography from "./theme/typography";
 import palette from "./theme/palette";
 
 const theme = createTheme({
   overrides: {
     MuiCssBaseline: {
-      '@global': {
+      "@global": {
         body: {
-          backgroundColor: '#25262B'
-        }
-      }
-    }
+          backgroundColor: "#2D2E32",
+        },
+      },
+    },
   },
   palette,
-  typography
+  typography,
 });
 
 export default theme;
