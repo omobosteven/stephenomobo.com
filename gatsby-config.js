@@ -50,11 +50,9 @@ module.exports = {
       __key: "pages",
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: "gatsby-plugin-svgr",
       options: {
-        rule: {
-          include: /images/,
-        },
+        include: /images\/svgs/,
       },
     },
   ],

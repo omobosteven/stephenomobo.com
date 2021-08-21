@@ -11,7 +11,7 @@ const Navigation = ({ activeLink }) => {
   const [openDrawer, setOpenDrawer] = React.useState(false);
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth={false} className={classes.headerContainer}>
       <header className={classes.header}>
         <div className={classes.siteLogo}>
           <Link to="/" className="logo">
@@ -22,7 +22,7 @@ const Navigation = ({ activeLink }) => {
         <nav className={classes.mainNav}>
           <ul className="navItems">
             <li className={clsx("navItem", activeLink === "about" && "active")}>
-              <Link to="/about">About</Link>
+              <Link to="/">About</Link>
             </li>
             <li
               className={clsx("navItem", activeLink === "projects" && "active")}
@@ -67,7 +67,7 @@ const Navigation = ({ activeLink }) => {
               <li
                 className={clsx("navItem", activeLink === "about" && "active")}
               >
-                <Link to="/about" onClick={() => setOpenDrawer(false)}>
+                <Link to="/" onClick={() => setOpenDrawer(false)}>
                   About
                 </Link>
               </li>
@@ -112,6 +112,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    maxWidth: 1440,
+    margin: "0 auto",
+  },
+
+  headerContainer: {
+    position: "sticky",
+    top: 0,
+    backgroundColor: "#25262B",
+    boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.3)",
+    zIndex: 10000,
   },
 
   hamburgerMenu: {
@@ -124,7 +134,7 @@ const useStyles = makeStyles((theme) => ({
     "& .logo": {
       color: "#ECECEC",
       fontFamily: "Inconsolata, monospace",
-      fontSize: 20,
+      fontSize: theme.typography.fontSizeXXLarge,
       fontWeight: 600,
       padding: "8px 5px",
 
