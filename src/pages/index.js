@@ -206,7 +206,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     stackBox: {
-      paddingBottom: "84%",
+      paddingBottom: "89%",
     },
   },
 }));
