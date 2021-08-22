@@ -1,13 +1,13 @@
 import * as React from "react";
 import { SvgIcon, makeStyles } from "@material-ui/core";
-import { ReactComponent as ConstructionBlock } from "../images/svgs/constructio-block.svg";
+import { ReactComponent as Construction } from "../images/svgs/construction.svg";
 
 const UnderConstruction = () => {
   const classes = useStyles();
 
   return (
     <section className={classes.section}>
-      <SvgIcon component={ConstructionBlock} className="blockIcon" />
+      <SvgIcon component={Construction} className="blockIcon" />
       <p className="text">Under Construction</p>
     </section>
   );
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     textAlign: "center",
 
     "& .MuiSvgIcon-root.blockIcon": {
-      fontSize: 200,
+      fontSize: 150,
     },
 
     "& .text": {
