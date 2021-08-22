@@ -103,12 +103,9 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         alignItems: "center",
         maxWidth: 420,
-        // justifyContent: "space-between",
 
         "& .MuiSvgIcon-root": {
-          // outline: "1px solid red",
           flexBasis: "31.5%",
-          // width: "31.5%",
           fontSize: 40,
 
           "&:not(:last-of-type)": {
@@ -209,7 +206,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     stackBox: {
-      paddingBottom: "80%",
+      paddingBottom: "84%",
     },
   },
 }));
