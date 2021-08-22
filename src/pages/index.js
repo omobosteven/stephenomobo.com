@@ -1,8 +1,10 @@
 import * as React from "react";
-import { makeStyles, Grid, Box, Typography } from "@material-ui/core";
+import { makeStyles, Grid, Box, Typography, SvgIcon } from "@material-ui/core";
 import clsx from "clsx";
-import { StaticImage } from "gatsby-plugin-image";
 import { differenceInCalendarYears } from "date-fns";
+import { ReactComponent as Andela } from "../images/svgs/andelaLogo.svg";
+import { ReactComponent as Arvo } from "../images/svgs/arvoLogo.svg";
+import { ReactComponent as Prunedge } from "../images/svgs/prunedgeLogo.svg";
 import Stacks from "../components/stacks";
 import Layout from "../components/layout";
 import { Container, Chip } from "../reusables";
@@ -60,24 +62,9 @@ const IndexPage = () => {
                   </span>
                 </Typography>
                 <div className="workLogo">
-                  <StaticImage
-                    src="../images/andelaLogo.svg"
-                    alt="andela"
-                    className="gatsbyImage"
-                    imgClassName="img"
-                  />
-                  <StaticImage
-                    src="../images/arvoLogo.png"
-                    alt="arvo"
-                    className="gatsbyImage"
-                    imgClassName="img"
-                  />
-                  <StaticImage
-                    src="../images/prunedgeLogo.svg"
-                    alt="prunedge"
-                    className="gatsbyImage prunedge"
-                    imgClassName="img"
-                  />
+                  <SvgIcon component={Andela} viewBox="0 0 24 7" />
+                  <SvgIcon component={Arvo} viewBox="0 0 24 9" />
+                  <SvgIcon component={Prunedge} viewBox="0 0 24 8.2" />
                 </div>
               </Box>
             </Grid>
@@ -115,9 +102,14 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 20,
         display: "flex",
         alignItems: "center",
+        maxWidth: 420,
+        // justifyContent: "space-between",
 
-        "& .gatsbyImage": {
-          flexBasis: "32%",
+        "& .MuiSvgIcon-root": {
+          // outline: "1px solid red",
+          flexBasis: "31.5%",
+          // width: "31.5%",
+          fontSize: 40,
 
           "&:not(:last-of-type)": {
             marginRight: 10,
