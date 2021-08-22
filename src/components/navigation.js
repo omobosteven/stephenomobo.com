@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     maxWidth: 1440,
-    margin: "0 auto",
+    // margin: "0 auto",
   },
 
   headerContainer: {
@@ -269,7 +269,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
 
-  "@media screen and (min-width: 768px)": {
+  "@media screen and (min-width: 800px)": {
     siteLogo: {
       "& .logo": {
         fontSize: 22,
