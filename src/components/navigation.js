@@ -44,10 +44,17 @@ const Navigation = ({ activeLink }) => {
         </nav>
 
         <nav className={classes.mobileNav}>
-          <MenuRounded
-            onClick={() => setOpenDrawer(true)}
-            className={classes.hamburgerMenu}
-          />
+          {!openDrawer ? (
+            <MenuRounded
+              onClick={() => setOpenDrawer(true)}
+              className={classes.hamburgerMenu}
+            />
+          ) : (
+            <CloseRounded
+              onClick={() => setOpenDrawer(false)}
+              className={classes.hamburgerMenu}
+            />
+          )}
 
           <Drawer
             open={openDrawer}
@@ -59,17 +66,11 @@ const Navigation = ({ activeLink }) => {
               className: classes.drawerPaper,
             }}
           >
-            <CloseRounded
-              onClick={() => setOpenDrawer(false)}
-              className="closeIcon"
-            />
             <ul className="navItems">
               <li
                 className={clsx("navItem", activeLink === "about" && "active")}
               >
-                <Link to="/" onClick={() => setOpenDrawer(false)}>
-                  About
-                </Link>
+                <Link to="/">About</Link>
               </li>
               <li
                 className={clsx(
@@ -77,9 +78,7 @@ const Navigation = ({ activeLink }) => {
                   activeLink === "projects" && "active"
                 )}
               >
-                <Link to="/projects" onClick={() => setOpenDrawer(false)}>
-                  Projects
-                </Link>
+                <Link to="/projects">Projects</Link>
               </li>
               <li
                 className={clsx(
@@ -87,16 +86,12 @@ const Navigation = ({ activeLink }) => {
                   activeLink === "fun-facts" && "active"
                 )}
               >
-                <Link to="/fun-facts" onClick={() => setOpenDrawer(false)}>
-                  Fun facts
-                </Link>
+                <Link to="/fun-facts">Fun facts</Link>
               </li>
               <li
                 className={clsx("navItem", activeLink === "blog" && "active")}
               >
-                <Link to="/blog" onClick={() => setOpenDrawer(false)}>
-                  Blog
-                </Link>
+                <Link to="/blog">Blog</Link>
               </li>
             </ul>
           </Drawer>
