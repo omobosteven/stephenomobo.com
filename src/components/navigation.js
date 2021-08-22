@@ -1,6 +1,6 @@
 import * as React from "react";
-import { makeStyles } from "@material-ui/core";
-import { Drawer } from "@material-ui/core";
+import { makeStyles, Drawer } from "@material-ui/core";
+import { GitHub, LinkedIn, Email } from "@material-ui/icons";
 import { MenuRounded, CloseRounded } from "@material-ui/icons";
 import { Link } from "gatsby-theme-material-ui";
 import clsx from "clsx";
@@ -17,6 +17,30 @@ const Navigation = ({ activeLink }) => {
           <Link to="/" className="logo">
             Stephen<span className="last">Omobo</span>
           </Link>
+
+          <div className={classes.contacts}>
+            <Link
+              href="https://github.com/omobosteven"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHub className="githubIcon" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/omobostephen/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedIn />
+            </Link>
+            <Link
+              href="mailto:stephen.omobo@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Email />
+            </Link>
+          </div>
         </div>
 
         <nav className={classes.mainNav}>
@@ -108,7 +132,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     maxWidth: 1440,
-    // margin: "0 auto",
   },
 
   headerContainer: {
@@ -126,6 +149,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   siteLogo: {
+    display: "flex",
+    alignItems: "center",
+
     "& .logo": {
       color: "#ECECEC",
       fontFamily: "Inconsolata, monospace",
@@ -141,6 +167,31 @@ const useStyles = makeStyles((theme) => ({
         color: "#D0D0D0",
         marginLeft: 4,
         fontWeight: 500,
+      },
+    },
+  },
+
+  contacts: {
+    marginLeft: 15,
+    display: "flex",
+    alignItems: "center",
+
+    "& .MuiLink-root": {
+      lineHeight: 1,
+      display: "flex",
+      alignItems: "center",
+      color: "#D0D0D0",
+
+      "&:not(:last-of-type)": {
+        marginRight: 20,
+      },
+
+      "& .MuiSvgIcon-root": {
+        fontSize: 23,
+      },
+
+      "& .githubIcon": {
+        fontSize: 21,
       },
     },
   },
