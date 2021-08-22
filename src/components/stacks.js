@@ -170,10 +170,11 @@ const useStyles = makeStyles({
     position: "absolute",
     top: 0,
     left: 0,
+    right: 0,
     maxHeight: 660,
 
     "@media screen and (min-width: 1280px)": {
-      transform: "translateX(15%)",
+      margin: "auto",
     },
   },
 });
